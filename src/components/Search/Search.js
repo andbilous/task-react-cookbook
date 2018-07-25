@@ -79,8 +79,8 @@ class Search extends Component{
                 <table>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Actions</th>
+                            <th>Назва</th>
+                            <th>Дії</th>
                         </tr>
                     </thead>
                     <tbody>
