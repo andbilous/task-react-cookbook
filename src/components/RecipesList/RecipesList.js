@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-
 import { deleteRecipe } from '../../actions/recipesAction';
 
 import './RecipesList.css';
@@ -11,6 +10,7 @@ import './RecipesList.css';
 import Delete from '../../images/delete.png';
 import Edit from '../../images/edit-icon.png';
 import Eye from '../../images/view.png';
+import Rating from '../../../node_modules/react-rating';
 
 class RecipesList extends Component{ 
     
@@ -25,6 +25,7 @@ class RecipesList extends Component{
                     <tr key={ recipe.id }>
                         <td>
                             { recipe.name }
+                            <Rating />
                         </td>
                         
                         <td>

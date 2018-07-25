@@ -34,14 +34,12 @@ class RecipeShow extends Component{
 }
 
 RecipeShow.propTypes = {
-    recipe: PropTypes.object.isRequired,
-    ingredients: PropTypes.object.isRequired
+    recipe: PropTypes.object.isRequired
 }
 
 function mapStateToProps({ recipes, ingredients }, ownProps){
     return { 
-        recipe: recipes[ownProps.match.params.id],
-        ingredients
+        recipe: recipes[ownProps.match.params.id]
     }
 }
 
