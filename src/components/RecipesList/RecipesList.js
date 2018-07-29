@@ -10,10 +10,9 @@ import './RecipesList.css';
 import Delete from '../../images/delete.png';
 import Edit from '../../images/edit-icon.png';
 import Eye from '../../images/view.png';
-import Rating from '../../../node_modules/react-rating';
+import StarRatings from '../../../node_modules/react-star-ratings';
+class RecipesList extends Component{
 
-class RecipesList extends Component{ 
-    
     handleDeleteRecipe(id){
         this.props.deleteRecipe(id);
     }
@@ -25,9 +24,15 @@ class RecipesList extends Component{
                     <tr key={ recipe.id }>
                         <td>
                             { recipe.name }
-                            <Rating />
+                            <StarRatings
+                            numberOfStars={5}
+                            name='rating'
+                            rating={recipe.rating}
+                            starRatedColor="red"
+                            changeRating={recipe.changeRating}
+                            />
                         </td>
-                        
+
                         <td>
                             <Link to={`/recipes/show/${recipe.id}`}>
                             <img src={ Eye } alt="L"/>
